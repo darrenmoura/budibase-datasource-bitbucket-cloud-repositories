@@ -1,0 +1,133 @@
+{
+  "type": "datasource",
+  "metadata": {},
+  "schema": {
+    "docs": "https://developer.atlassian.com/cloud/bitbucket/rest/intro/",
+    "friendlyName": "Bitbucket Cloud - Repositories",
+    "type": "API",
+    "description": "Manage Bitbucket Cloud repositories. Uses Bitbucket REST API V2.0.",
+    "datasource": {
+      "username": {
+        "type": "string",
+        "required": true
+      },
+      "appPassword": {
+        "display": "App Password",
+        "type": "password",
+        "required": true
+      }
+    },
+    "query": {
+      "create": {
+        "type": "fields",
+        "fields": {
+          "workspaceId": {
+            "display": "Workspace ID",
+            "type": "string",
+            "required": true
+          },
+          "repoSlug": {
+            "display": "Repository Slug",
+            "type": "string",
+            "required": true
+          },
+          "body": {
+            "display": "Body",
+            "type": "json",
+            "required": false
+          }
+        }
+      },
+      "read": {
+        "type": "fields",
+        "fields": {
+          "workspaceId": {
+            "display": "Workspace ID",
+            "type": "string",
+            "required": true
+          },
+          "repoSlug": {
+            "display": "Repository Slug",
+            "type": "string",
+            "required": true
+          }
+        }
+      },
+      "list": {
+        "type": "fields",
+        "fields": {
+          "workspaceId": {
+            "display": "Workspace ID",
+            "type": "string",
+            "required": true
+          },
+          "role": {
+            "display": "Role",
+            "type": "string",
+            "required": false
+          },
+          "query": {
+            "display": "Query",
+            "type": "string",
+            "required": false
+          },
+          "sort": {
+            "display": "Sort",
+            "type": "string",
+            "required": false
+          },
+          "page": {
+            "display": "Page",
+            "type": "string",
+            "required": false
+          },
+          "pageLength": {
+            "display": "Page Length",
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "update": {
+        "type": "fields",
+        "fields": {
+          "workspaceId": {
+            "display": "Workspace ID",
+            "type": "string",
+            "required": true
+          },
+          "repoSlug": {
+            "display": "Repository Slug",
+            "type": "string",
+            "required": true
+          },
+          "body": {
+            "display": "Body",
+            "type": "json",
+            "required": true
+          }
+        }
+      },
+      "delete": {
+        "type": "fields",
+        "fields": {
+          "workspaceId": {
+            "display": "Workspace ID",
+            "type": "string",
+            "required": true
+          },
+          "repoSlug": {
+            "display": "Repository Slug",
+            "type": "string",
+            "required": true
+          },
+          "redirectTo": {
+            "display": "Redirect To",
+            "type": "string",
+            "required": false
+          }
+        }
+      }
+    }
+  }
+}
