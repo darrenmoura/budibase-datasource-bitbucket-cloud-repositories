@@ -114,7 +114,7 @@ class CustomIntegration implements IntegrationBase {
       }
     } else {
       const err = await response.text()
-      throw new Error(`${err} -- ${JSON.stringify(opts)}`)
+      throw new Error(err)
     }
   }
 
